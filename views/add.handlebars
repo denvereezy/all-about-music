@@ -1,0 +1,11 @@
+<form action="/music/upload" method="post" enctype="multipart/form-data">
+<label>ADD A NEW FILE</label>
+<input id="song" type="file" name="audio" value="{{audio}}">
+<input type="submit" value="upload">
+</form>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+var name = $('#song').val();
+  console.log(name);
+</script>
