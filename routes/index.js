@@ -51,4 +51,21 @@ exports.delete =  function(req ,res, next) {
       res.redirect('/');
     })
   })
-}
+};
+
+exports.edit = function(req, res, next) {
+  req.getConnection(function(err, connection) {
+    if(err) {
+      console.log(err);
+    };
+    var id = req.params.id;
+    connection.query('select * from music where id = ?', id, function(err, results) {
+      if(err) {
+        console.log(err);
+      };
+      res.render('edit', {
+        results: results[0]
+      });
+    });
+  });
+};
