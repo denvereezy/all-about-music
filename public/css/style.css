@@ -21,7 +21,7 @@ p{	margin: 20px 0px 20px 0px;line-height: 16px;font-size: 14px;}
 	width:873px;
 }
 #menu {
-	background-image:url('./images/menu.gif');
+	background-image:url('../images/menu.gif');
 	width:862px;
 	height:90px;
 	position:relative;
@@ -47,7 +47,7 @@ p{	margin: 20px 0px 20px 0px;line-height: 16px;font-size: 14px;}
 }
 #menu a:hover {color: #01a9c0;}
 #header {
-	background-image:url('./images/header.gif');
+	background-image:url('../images/header.gif');
 	background-repeat:repeat-y;
 	width:873px;
 }
@@ -59,7 +59,7 @@ p{	margin: 20px 0px 20px 0px;line-height: 16px;font-size: 14px;}
 	display:inline;
 }
 #dj {
-	background-image:url('./images/dj.jpg');
+	background-image:url('../images/dj.jpg');
 	width:498px;
 	height:405px;
 	float:right;
@@ -82,17 +82,17 @@ p{	margin: 20px 0px 20px 0px;line-height: 16px;font-size: 14px;}
 	border: solid 3px #FFFFFF;
 }
 #middle {
-	background-image:url('./images/middle.gif');
+	background-image:url('../images/middle.gif');
 	width:873px;
 	height:21px;
 }
 #middle2 {
-	background-image:url('./images/middle2.gif');
+	background-image:url('../images/middle2.gif');
 	width:873px;
 	height:22px;
 }
 #content {
-	background-image:url('./images/content.gif');
+	background-image:url('../images/content.gif');
 	width:873px;
 }
 #left {
@@ -113,7 +113,7 @@ p{	margin: 20px 0px 20px 0px;line-height: 16px;font-size: 14px;}
 	border: none 0px #FFFFFF;
 }
 #footer {
-	background-image:url('./images/footer.gif');
+	background-image:url('../images/footer.gif');
 	background-repeat:no-repeat;
 	width:873px;
 }
