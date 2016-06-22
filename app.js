@@ -21,7 +21,10 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
 
-app.get('/', music.show);
+app.get('/', function(req, res){
+  res.render('index');
+});
+app.get('/music', music.show);
 app.get('/add', function(req, res){
   res.render('add');
 });
