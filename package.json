@@ -11,8 +11,15 @@
   "dependencies": {
     "bluebird": "^3.4.0",
     "body-parser": "^1.15.1",
+    "co": "^4.6.0",
+    "compression": "^1.6.2",
+    "connection-provider": "git://github.com/avermeulen/connection-provider.git",
+    "cookie-parser": "^1.4.3",
+    "encryptonator": "^1.1.2",
     "express": "^4.13.4",
+    "express-flash": "0.0.2",
     "express-myconnection": "^1.0.4",
+    "express-session": "^1.13.0",
     "multer": "^1.1.0",
     "mysql": "^2.10.2"
   }
