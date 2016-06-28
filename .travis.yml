@@ -4,9 +4,9 @@
 language: node_js
 node_js:
   - "4.2"
+  - "5"
 
 before_script:
-  - npm install -g mocha
   - npm install
   - mysql -u root -e 'create database travis_db;'
   - mysql -u root travis_db < tables.sql

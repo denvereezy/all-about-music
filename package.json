@@ -22,5 +22,8 @@
     "express-session": "^1.13.0",
     "multer": "^1.1.0",
     "mysql": "^2.10.2"
-  }
+  },
+  "devDependencies": {
+  "mocha": "~2.4.5"
+}
 }
