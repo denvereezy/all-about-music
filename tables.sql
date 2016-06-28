@@ -9,7 +9,7 @@ create table music(
   song varchar(100),
   name varchar(100),
   user_id int not null,
-  foreign key(user_id) references(users.id)
+  foreign key(user_id) references users (id)
 );
 
 insert into users(username, password) values('bobby');
