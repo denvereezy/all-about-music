@@ -5,6 +5,6 @@ before_script:
   - npm install -g mocha
   - npm install
   - mysql -u root -e 'create database travis_db;'
-  - mysql -u root travis_db < sql/tables.sql
+  - mysql -u root travis_db < tables.sql
 
 script: mocha
