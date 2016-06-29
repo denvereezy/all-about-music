@@ -14,11 +14,11 @@ module.exports = function(connection) {
       return queryDataService.executeQuery('select * from music where id = ?', id);
     };
 
-    this.delete = function(id, user_id) {
-      return queryDataService.executeQuery('delete from music where id = ? and user_id = ?', [id, user_id]);
+    this.delete = function(id) {
+      return queryDataService.executeQuery('delete from music where id = ?', id);
     };
 
-    this.update = function(id, user_id) {
-      return queryDataService.executeQuery('update music set where id = ? and user id = ?', [id, user_id]);
+    this.update = function(data, id) {
+      return queryDataService.executeQuery('update music set ? where id = ?', [data, id]);
     };
 };
