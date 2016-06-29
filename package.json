@@ -20,7 +20,8 @@
     "express-myconnection": "^1.0.4",
     "express-session": "^1.13.0",
     "multer": "^1.1.0",
-    "mysql": "^2.10.2"
+    "mysql": "^2.10.2",
+    "encryptonator": "^1.1.2"
   },
   "devDependencies": {
   "mocha": "~2.4.5"
