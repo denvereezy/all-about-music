@@ -10,7 +10,7 @@ const LoginDataService = require('../data_services/loginDataService');
 const connection = mysql.createConnection({
     host: 'localhost',
     user: process.env.MYSQL_USER || 'root',
-    password: password || 'password',
+    password: password,
     port: 3306,
     database: 'music'
 });
