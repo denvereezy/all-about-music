@@ -2,6 +2,7 @@
 .travis.yml:
 
 install:
+  - npm install bcrypt@0.8.5 /home/travis/build/denvereezy/all-about-music/node_modules/encryptonator/node_modules/bcrypt
   - npm install -g npm@2
 
 language: node_js
