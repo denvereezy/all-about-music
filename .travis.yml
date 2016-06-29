@@ -1,6 +1,9 @@
 
 .travis.yml:
 
+install:
+  - npm install -g npm@2
+  
 language: node_js
 node_js:
   - "4.4.2"
