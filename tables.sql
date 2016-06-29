@@ -16,6 +16,9 @@ insert into users(username, password) values('bobby', '$2a$10$1OPvghAQXdfdf7Nzhe
 insert into users(username, password) values('nikki', '$2a$10$1OPvghAQXTKf7NzhejO3wuUQFnSAkyQiLVJPewH51HAiPmwxMHFY6');
 insert into users(username, password) values('bella', '$2a$10$1OfdghAQXTKf7NzhejO3wuUQFnSAkyQiLVJPewH51HAiPmwxMHFY6');
 insert into users(username, password) values('dolly', '$2a$10$1OPvghAQnfkbvf7NzhejO3wuUQFnSAkyQiLVJPewH51HAiPmwxMHFY6');
+insert into users(username, password) values('poppy', '$2a$10$1OPvghAQnfkbvf7NzhejO3wuUQFnSAkyQiLVJPewH51HAiPmwxMHFY6');
+insert into users(username, password) values('dicky', '$2a$10$1OPvghAQnfkbvf7NzhejO3wuUQFnSAkyQiLVJPewH51HAiPmwxMHFY6');
+insert into users(username, password) values('erl', '$2a$10$1OPvghAQnfkbvf7NzhejO3wuUQFnSAkyQiLVJPewH51HAiPmwxMHFY6');
 
 
 insert into music(song, name, user_id) values('/uploads/jh28t24bbc8bw8we', 'song.mp3',  1);
