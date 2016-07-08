@@ -12,9 +12,14 @@ const express      = require('express'),
 
 const music = require('./routes/music');
 const login = require('./routes/login');
+const signup = require('./routes/signup');
+const router = require('./routes/router');
+
 const MusicDataService = require('./data_services/musicDataService');
 const QueryDataService = require('./data_services/queryDataService');
 const LoginDataService = require('./data_services/loginDataService');
+const SignupDataService = require('./data_services/signupDataService');
+
 const dbOptions = {
   host: 'localhost',
   port: 3306,
@@ -27,7 +32,8 @@ const serviceSetupCallBack = function (connection) {
   return {
     queryDataService                  : new QueryDataService(connection),
     musicDataService                  : new MusicDataService(connection),
-    loginDataService                  : new LoginDataService(connection)
+    loginDataService                  : new LoginDataService(connection),
+    signupDataService                 : new SignupDataService(connection)
   }
 };
 
@@ -42,18 +48,19 @@ app.use(flash());
 app.engine('handlebars', exhbs({defaultLayout : 'main'}));
 app.set('view engine', 'handlebars');
 
-app.get('/', function(req, res){
-  res.render('login',{
-    layout: false
-  });
-});
-app.get('/music', music.show);
-app.get('/add', function(req, res){
-  res.render('add');
-});
+app.get('/', router.login);
 app.post('/login', login.login);
-app.post('/music/upload',multer({ dest: './public/uploads/', ext: '.mp3'}).single('audio') , music.add);
-app.get('/delete/:id', music.delete);
+app.get('/signup', router.signup);
+app.post('/signup', signup.add);
+app.use(router.checkUser);
+app.get('/home', router.checkUser, router.home);
+app.get('/music', router.checkUser, music.show);
+app.get('/add', router.checkUser, router.addSong);
+app.post('/music/upload', router.checkUser, multer({ dest: './public/uploads/', ext: '.mp3'}).single('audio') , music.add);
+app.get('/delete/:id', router.checkUser, music.delete);
+app.get('/logout', router.checkUser, router.logout);
+
+
 const port = process.env.PORT || 2016;
 const server = app.listen(port, function () {
   const host = server.address().address;
