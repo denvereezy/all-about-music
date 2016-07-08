@@ -37,11 +37,11 @@ insert into music(song, name, user_id) values('/uploads/akw82nxhwtbwyqby', 'song
     foreign key(user_id) references users (id)
   );
 
-  insert into music(video, name, user_id) values('/uploads/jh28t24bbc8bw8we', 'video0.mp3', 1);
-  insert into music(video, name, user_id) values('/uploads/bfjdbfn37ebffufb', 'video1.mp3', 2);
-  insert into music(video, name, user_id) values('/uploads/bnfjdwfjbfdjb2jb', 'video2.mp3', 3);
-  insert into music(video, name, user_id) values('/uploads/pkwndbd22ni2n3k3', 'video3.mp3', 4);
-  insert into music(video, name, user_id) values('/uploads/ojsb6584ndh372jh', 'video4.mp3', 4);
-  insert into music(video, name, user_id) values('/uploads/ien36bsfw52vs62b', 'video5.mp3', 2);
-  insert into music(video, name, user_id) values('/uploads/qu282n6153vstsbs', 'video6.mp3', 3);
-  insert into music(video, name, user_id) values('/uploads/akw82nxhwtbwyqby', 'video7.mp3', 1);
+  insert into videos(video, name, user_id) values('/uploads/jh28t24bbc8bw8we', 'video0.mp3', 1);
+  insert into videos(video, name, user_id) values('/uploads/bfjdbfn37ebffufb', 'video1.mp3', 2);
+  insert into videos(video, name, user_id) values('/uploads/bnfjdwfjbfdjb2jb', 'video2.mp3', 3);
+  insert into videos(video, name, user_id) values('/uploads/pkwndbd22ni2n3k3', 'video3.mp3', 4);
+  insert into videos(video, name, user_id) values('/uploads/ojsb6584ndh372jh', 'video4.mp3', 4);
+  insert into videos(video, name, user_id) values('/uploads/ien36bsfw52vs62b', 'video5.mp3', 2);
+  insert into videos(video, name, user_id) values('/uploads/qu282n6153vstsbs', 'video6.mp3', 3);
+  insert into videos(video, name, user_id) values('/uploads/akw82nxhwtbwyqby', 'video7.mp3', 1);
