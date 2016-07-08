@@ -6,6 +6,7 @@ const password = process.env.MYSQL_PWD !== null ? process.env.MYSQL_PWD : 'passw
 const MusicDataService = require('../data_services/musicDataService');
 const SignupDataService = require('../data_services/signupDataService');
 const LoginDataService = require('../data_services/loginDataService');
+const VideoDataService = require('../data_services/videoDataService');
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -19,6 +20,7 @@ connection.connect();
 const musicDataService = new MusicDataService(connection);
 const signupDataService = new SignupDataService(connection);
 const loginDataService = new LoginDataService(connection);
+const videoDataService = new VideoDataService(connection);
 
 describe('testing user data service', function() {
     it('should add a user', function(done) {
@@ -119,6 +121,76 @@ describe('testing music data service', function() {
                 const id = 7;
                 const music = yield musicDataService.edit(id);
                 assert(music);
+                done();
+            } catch (err) {
+                console.error(err);
+            };
+        });
+    });
+});
+
+describe('testing video data service', function() {
+    it('should add a video given', function(done) {
+        co(function*() {
+            try {
+                const path = ('public/uploads/174bdv73bdkjs92nbd7').replace('public/', '');
+                const data = {
+                    song: path,
+                    name: 'video.mp4',
+                    user_id: 1
+                };
+                const video = yield videoDataService.add(data);
+                assert(video);
+                done();
+            } catch (err) {
+                console.log(err);
+            };
+        });
+    });
+    it('should update a video name', function(done) {
+        co(function*() {
+            try {
+                const id = 6;
+                const data = {
+                    name: 'a_video.mp3'
+                };
+                const video = yield videoDataService.update(data, id);
+                assert(video);
+                done();
+            } catch (err) {
+                console.error(err);
+            };
+        });
+    });
+    it('should delete a video', function(done) {
+        co(function*() {
+            try {
+                const id = 6;
+                const video = yield videoDataService.delete(id);
+                assert(video);
+                done();
+            } catch (err) {
+                console.error(err);
+            };
+        });
+    });
+    it('should show all videos', function(done) {
+        co(function*() {
+            try {
+                const video = yield videoDataService.show();
+                assert(video);
+                done();
+            } catch (err) {
+                console.error(err);
+            };
+        });
+    });
+    it('should show a video for specific id', function(done) {
+        co(function*() {
+            try {
+                const id = 7;
+                const video = yield videoDataService.edit(id);
+                assert(video);
                 done();
             } catch (err) {
                 console.error(err);
