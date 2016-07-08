@@ -135,7 +135,7 @@ describe('testing video data service', function() {
             try {
                 const path = ('public/uploads/174bdv73bdkjs92nbd7').replace('public/', '');
                 const data = {
-                    song: path,
+                    video: path,
                     name: 'video.mp4',
                     user_id: 1
                 };
