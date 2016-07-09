@@ -15,7 +15,9 @@ co(function*() {
         } else {
             const match = yield encryptonator.comparePassword(password, user[0].password);
             if (match) {
-                res.redirect('/music');
+                req.session.user = user[0].username;
+                req.session.user_id = user[0].id;
+                res.redirect('ho');
             } else {
                 req.flash('alert', 'username or password invalid');
                 res.redirect('/');
