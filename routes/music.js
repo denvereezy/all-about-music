@@ -18,10 +18,11 @@ exports.add = function(req, res, next) {
   co(function* (){
          const services = yield req.getServices();
          const path = (req.file.path).replace('public/', '');
+  
          const data = {
              song: path,
              name: req.file.originalname,
-             user_id: 1
+             user_id: req.session.user_id
          };
          const musicDataService = services.musicDataService;
          const music = yield musicDataService.add(data);
