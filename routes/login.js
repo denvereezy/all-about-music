@@ -17,7 +17,7 @@ co(function*() {
             if (match) {
                 req.session.user = user[0].username;
                 req.session.user_id = user[0].id;
-                res.redirect('ho');
+                res.redirect('/home');
             } else {
                 req.flash('alert', 'username or password invalid');
                 res.redirect('/');
