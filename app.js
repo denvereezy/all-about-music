@@ -58,6 +58,10 @@ app.get('/music', router.checkUser, music.show);
 app.get('/add', router.checkUser, router.addSong);
 app.post('/music/upload', router.checkUser, multer({ dest: './public/uploads/', ext: '.mp3'}).single('audio') , music.add);
 app.get('/delete/:id', router.checkUser, music.delete);
+app.get('/videos', router.checkUser, videos.show);
+app.get('/video/add', router.checkUser, router.addVideo);
+app.post('/video/upload', router.checkUser, multer({ dest: './public/uploads/', ext: '.mp4'}).single('vido') , videos.add);
+app.get('/video/delete/:id', router.checkUser, videos.delete);
 app.get('/logout', router.checkUser, router.logout);
 
 
