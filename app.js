@@ -14,11 +14,13 @@ const music = require('./routes/music');
 const login = require('./routes/login');
 const signup = require('./routes/signup');
 const router = require('./routes/router');
+const videos = require('./routes/videos');
 
 const MusicDataService = require('./data_services/musicDataService');
 const QueryDataService = require('./data_services/queryDataService');
 const LoginDataService = require('./data_services/loginDataService');
 const SignupDataService = require('./data_services/signupDataService');
+const VideoDataService = require('./data_services/videoDataService');
 
 const dbOptions = {
   host: 'localhost',
