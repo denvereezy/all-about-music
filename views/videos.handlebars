@@ -1,12 +1,11 @@
-
 {{#videos}}
-<p>
-  {{name}}
-</p>
-<audio controls id="{{id}}">
-  <source src="{{video}}" type="video/ogg">
-  <source src="{{video}}" type="video/mpeg">
-</audio>
+    <p>
+        {{name}}
+    </p>
+{{/videos}}
+<video width="320" height="240" controls>
+    <source src="{{video}}" type="video/mp4">
+    <source src="{{video}}" type="video/ogg">
+</video>
 <a href="{{video}}" download>Download</a>
 <a href="/delete/{{id}}">Delete</a>
-{{/videos}}
