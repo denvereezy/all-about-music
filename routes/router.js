@@ -30,3 +30,7 @@ exports.logout = function(req, res, next) {
     delete req.session.user
     res.redirect("/");
 };
+
+exports.addVideo = function(req, res, next) {
+    res.render('addVideo');
+};
