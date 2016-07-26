@@ -62,7 +62,7 @@ app.post('/music/upload', router.checkUser, multer({ dest: './public/uploads/', 
 app.get('/delete/:id', router.checkUser, music.delete);
 app.get('/videos', router.checkUser, videos.show);
 app.get('/video/add', router.checkUser, router.addVideo);
-app.post('/video/upload', router.checkUser, multer({ dest: './public/uploads/', ext: '.mp4'}).single('vido') , videos.add);
+app.post('/video/upload', router.checkUser, multer({ dest: './public/uploads/', ext: '.mp4'}).single('video') , videos.add);
 app.get('/video/delete/:id', router.checkUser, videos.delete);
 app.get('/logout', router.checkUser, router.logout);
 
