@@ -27,7 +27,7 @@ exports.add = function(req, res, next) {
          const videoDataService = services.videoDataService;
          const video = yield videoDataService.add(data);
          try{
-                 res.redirect('/music');
+                 res.redirect('/videos');
          }
          catch(err){
              next(err);
@@ -41,10 +41,10 @@ exports.delete =  function(req ,res, next) {
   co(function* (){
          const services = yield req.getServices();
          const id = req.params.id;
-         const musicDataService = services.musicDataService;
-         const music = yield musicDataService.delete(id);
+         const videoDataService = services.videoDataService;
+         const video = yield video.delete(id);
          try{
-                 res.redirect('/music');
+                 res.redirect('/videos');
          }
          catch(err){
              console.err(err);
