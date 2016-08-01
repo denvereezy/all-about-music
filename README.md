@@ -12,8 +12,8 @@ This app allows users to share they own music & videos with others and also expl
 
 ##Note
 ### One of the modules used needed to be changed a bit to be able to use it. 
-* Locate the `node_modules` folder and go into the `multer`.
-* Go into the `storage` folder and you should see a `disk.js` file.
+* Locate the `node_modules` folder and go into the `multer` folder.
+* Then go into the `storage` folder and you should see a `disk.js` file.
 * Open the file and edit the `getFilename` function so that it looks like this:
  
 ``` javascript
