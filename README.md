@@ -37,9 +37,9 @@ function getFilename (req, file, cb) {
 
 ##Using the app
 * You can uploaud music/videos and also delete those you don't want anymore.
-  <img src="./public/images/upload.png" height="50px">
+ <img src="./public/images/upload.png" height="50px">
 * If you don't want to upload you can watch/listen to content of other people.
-  <img src="./public/images/listen.png" height="50px">
+*  <img src="./public/images/listen.png" height="50px">
 * If you like it you can download it if they allow it.
 
 
