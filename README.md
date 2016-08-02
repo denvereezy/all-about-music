@@ -30,7 +30,7 @@ function getFilename (req, file, cb) {
 * In the terminal run `mocha`. It can be installed using: `npm install mocha -g`.
 
 ##Starting the app
-* Run `nodemon/node app.js` and you should see a message: `App running on http://:::2016`.
+* Run `nodemon app.js` or `node app.js` and you should see a message: `App running on http://localhost:2016`.
 * In the brower type in `localhost:2016`.
 * After signing up & logging in you should see a screen like this:
 <img src="./public/images/home.png" height="400px">
