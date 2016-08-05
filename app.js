@@ -35,7 +35,8 @@ const serviceSetupCallBack = function (connection) {
     queryDataService                  : new QueryDataService(connection),
     musicDataService                  : new MusicDataService(connection),
     loginDataService                  : new LoginDataService(connection),
-    signupDataService                 : new SignupDataService(connection)
+    signupDataService                 : new SignupDataService(connection),
+    videoDataService                  : new VideoDataService(connection)
   }
 };
 
