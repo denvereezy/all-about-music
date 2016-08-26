@@ -16,6 +16,10 @@ exports.home = function(req, res, next) {
     res.render('index');
 };
 
+exports.error = function(req, res, next) {
+    res.render('404');
+};
+
 exports.signup = function(req, res, next) {
     res.render('signup', {
         layout: false
