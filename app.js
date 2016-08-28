@@ -55,6 +55,7 @@ app.get('/', router.login);
 app.post('/login', login.login);
 app.get('/signup', router.signup);
 app.post('/signup', signup.add);
+app.get('/error', router.error);
 app.use(router.checkUser);
 app.get('/home', router.checkUser, router.home);
 app.get('/music', router.checkUser, music.show);
