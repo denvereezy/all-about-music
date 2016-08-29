@@ -11,7 +11,7 @@ exports.show = function(req, res, next) {
             });
         } catch (err) {
             console.error(err);
-            res.redirect('/videos');
+            res.redirect('/error');
         }
     });
 };
@@ -32,7 +32,7 @@ exports.add = function(req, res, next) {
             res.redirect('/videos');
         } catch (err) {
             next(err);
-            res.redirect('/')
+            res.redirect('/error')
         }
     });
 };
@@ -42,14 +42,13 @@ exports.delete = function(req, res, next) {
     co(function*() {
         const services = yield req.getServices();
         const id = req.params.id;
-        console.log(id);
         const videoDataService = services.videoDataService;
         const video = yield videoDataService.delete(id);
         try {
             res.redirect('/videos');
         } catch (err) {
             console.err(err);
-            res.redirect('/')
+            res.redirect('/error')
         }
     });
 };
