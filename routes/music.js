@@ -9,7 +9,7 @@ exports.show = function(req, res, next) {
                  res.render('music', {music : music});
          }
          catch(err){
-             res.render('music', {error : err});
+             res.render('/error');
          }
      });
 };
@@ -18,7 +18,7 @@ exports.add = function(req, res, next) {
   co(function* (){
          const services = yield req.getServices();
          const path = (req.file.path).replace('public/', '');
-  
+
          const data = {
              song: path,
              name: req.file.originalname,
@@ -31,7 +31,7 @@ exports.add = function(req, res, next) {
          }
          catch(err){
              next(err);
-             res.redirect('/')
+             res.redirect('/error')
          }
      });
 };
@@ -48,12 +48,12 @@ exports.delete =  function(req ,res, next) {
          }
          catch(err){
              console.err(err);
-             res.redirect('/')
+             res.redirect('/error')
          }
      });
 };
 
-exports.edit = function(req, res, next) {
-  console.log(music);
-
-};
+// exports.edit = function(req, res, next) {
+//   console.log(music);
+//
+// };
