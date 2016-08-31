@@ -19,7 +19,7 @@ exports.add = function(req, res, next) {
         const signup = yield signupDataService.add(data);
       };
         try {
-            res.redirect('/');
+            res.redirect('/error');
         } catch (err) {
             next(err);
         };
