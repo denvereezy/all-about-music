@@ -2,10 +2,10 @@
     <p>
         {{name}}
     </p>
-{{/videos}}
 <video width="320" height="240" controls>
     <source src="{{video}}" type="video/mp4">
     <source src="{{video}}" type="video/ogg">
 </video>
 <a href="{{video}}" download>Download</a>
-<a href="/delete/{{id}}">Delete</a>
+<a href="/video/delete/{{id}}">Delete</a>
+{{/videos}}
