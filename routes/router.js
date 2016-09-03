@@ -17,7 +17,9 @@ exports.home = function(req, res, next) {
 };
 
 exports.error = function(req, res, next) {
-    res.render('404');
+    res.render('404', {
+      layout: false
+    });
 };
 
 exports.signup = function(req, res, next) {
