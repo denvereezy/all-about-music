@@ -21,6 +21,7 @@ exports.add = function(req, res, next) {
         try {
             res.redirect('/');
         } catch (err) {
+          res.redirect('/error');
             next(err);
         };
     });
