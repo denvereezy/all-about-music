@@ -24,6 +24,7 @@ co(function*() {
             };
         }
     } catch (err) {
+      res.redirect(/error);
         next(err);
     };
 });
