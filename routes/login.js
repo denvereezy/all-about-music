@@ -24,7 +24,7 @@ co(function*() {
             };
         }
     } catch (err) {
-      res.redirect(/error);
+      res.redirect('/error');
         next(err);
     };
 });
