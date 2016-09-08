@@ -40,3 +40,7 @@ exports.logout = function(req, res, next) {
 exports.addVideo = function(req, res, next) {
     res.render('addVideo');
 };
+
+exports.select = function(req, res, next) {
+    res.render('showAdd');
+};
