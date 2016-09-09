@@ -59,6 +59,7 @@ app.get('/error', router.error);
 app.use(router.checkUser);
 app.get('/home', router.checkUser, router.home);
 app.get('/music', router.checkUser, music.show);
+app.get('/select', router.checkUser, router.select);
 app.get('/add', router.checkUser, router.addSong);
 app.post('/music/upload', router.checkUser, multer({ dest: './public/uploads/', ext: '.mp3'}).single('audio') , music.add);
 app.get('/delete/:id', router.checkUser, music.delete);
