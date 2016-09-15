@@ -27,6 +27,7 @@ exports.add = function(req, res, next) {
          const musicDataService = services.musicDataService;
          const music = yield musicDataService.add(data);
          try{
+                req.flash('alert', data.name + ' was added successfully');
                  res.redirect('/music');
          }
          catch(err){
