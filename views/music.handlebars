@@ -1,12 +1,14 @@
-
+{{#if messages.alert}}
+    <h3 style="color:blue;">{{messages.alert}}</h3>
+{{/if}}
 {{#music}}
-<p>
-  {{name}}
-</p>
-<audio controls id="{{id}}">
+    <p class='video'>
+        {{name}}
+    </p>
+    <audio class='video' controls id="{{id}}">
   <source src="{{song}}" type="audio/ogg">
   <source src="{{song}}" type="audio/mpeg">
 </audio>
-<a href="{{song}}" download>Download</a>
-<a href="/delete/{{id}}">Delete</a>
+    <a href="{{song}}" download>Download</a>
+    <a href="/delete/{{id}}">Delete</a>
 {{/music}}
