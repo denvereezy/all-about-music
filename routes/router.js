@@ -13,7 +13,11 @@ exports.login = function(req, res, next) {
 };
 
 exports.home = function(req, res, next) {
-    res.render('index');
+  var user = req.session.user;
+  console.log(user);
+    res.render('index', {
+      message: 'Welcome back ' + user + '!'
+    });
 };
 
 exports.error = function(req, res, next) {
