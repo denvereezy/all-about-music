@@ -1,4 +1,3 @@
-
 {{#if messages.alert}}
     <h3 style="color:blue;">{{messages.alert}}</h3>
 {{/if}}
@@ -11,5 +10,7 @@
   <source src="{{song}}" type="audio/mpeg">
 </audio>
     <a class="buttonDownload" href="{{song}}" download>Download</a>
-    <a class="buttonDelete" href="/delete/{{id}}">Delete</a>
+    {{#unless ../auth}}
+        <a class="buttonDelete" href="/delete/{{id}}">Delete</a>
+    {{/unless}}
 {{/music}}
