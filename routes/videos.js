@@ -5,9 +5,18 @@ exports.show = function(req, res, next) {
         const services = yield req.getServices();
         const videoDataService = services.videoDataService;
         const videos = yield videoDataService.show();
+        var auth;
+        for (var video in videos) {
+            if (videos[video].user_id !== req.session.user_id) {
+                auth = true;
+            } else {
+                auth = false;
+            }
+        }
         try {
             res.render('videos', {
-                videos: videos
+                videos: videos,
+                auth: auth
             });
         } catch (err) {
             console.error(err);
