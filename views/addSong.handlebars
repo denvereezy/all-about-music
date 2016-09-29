@@ -1,0 +1,45 @@
+<!-- <form action="/music/upload" method="post" enctype="multipart/form-data">
+<label>ADD A NEW FILE</label>
+<input id="song" type="file" name="audio" value="{{audio}}">
+<input type="submit" value="upload">
+</form>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+
+
+		<!-- Google web fonts -->
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+
+		<!-- The main CSS file -->
+		<link href="/assets/css/style.css" rel="stylesheet" />
+
+
+		<form id="upload" method="post" action="/music/upload" enctype="multipart/form-data">
+			<div id="drop">
+				Drop Here
+
+				<a>Browse</a>
+				<input id="song" type="file" name="audio" multiple accept="audio/*"/>
+			</div>
+
+			<ul>
+				<!-- The file uploads will be shown here -->
+			</ul>
+      <input type="submit" value="upload">
+
+		</form>
+
+		<!-- JavaScript Includes -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="/assets/js/jquery.knob.js"></script>
+
+		<!-- jQuery File Upload Dependencies -->
+		<script src="/assets/js/jquery.ui.widget.js"></script>
+		<script src="/assets/js/jquery.iframe-transport.js"></script>
+		<script src="/assets/js/jquery.fileupload.js"></script>
+
+		<!-- Our main JS file -->
+		<script src="/assets/js/script.js"></script>
+
+
+	</body>
+</html>
