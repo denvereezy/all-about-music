@@ -14,7 +14,6 @@ exports.login = function(req, res, next) {
 
 exports.home = function(req, res, next) {
   var user = req.session.user;
-  console.log(user);
     res.render('index', {
       message: 'Welcome back ' + user + '!'
     });
@@ -33,7 +32,7 @@ exports.signup = function(req, res, next) {
 };
 
 exports.addSong = function(req, res, next) {
-    res.render('add');
+    res.render('addSong');
 };
 
 exports.logout = function(req, res, next) {
