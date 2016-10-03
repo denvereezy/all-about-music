@@ -42,6 +42,7 @@ exports.add = function(req, res, next) {
             res.redirect('/music');
         } catch (err) {
             next(err);
+            console.log(err);
             res.redirect('/error')
         }
     });
@@ -62,8 +63,3 @@ exports.delete = function(req, res, next) {
         }
     });
 };
-
-// exports.edit = function(req, res, next) {
-//   console.log(music);
-//
-// };
