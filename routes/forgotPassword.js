@@ -4,7 +4,7 @@ const uuid = require('uuid'),
 exports.reset = function(req, res, next) {
     co(function*() {
             const data = {
-                email: req.body.email,
+                email: req.body.email
             };
             const services = yield req.getServices();
             const resetDataService = services.resetDataService;
