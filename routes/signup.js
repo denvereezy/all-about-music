@@ -6,7 +6,8 @@ exports.add = function(req, res, next) {
         const services = yield req.getServices();
         const signupDataService = services.signupDataService;
         const data = {
-            username: req.body.username
+            username: req.body.username,
+            email: req.body.email
         };
         const password = req.body.password;
         const confirmPassword = req.body.confirm;
