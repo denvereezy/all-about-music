@@ -4,7 +4,8 @@ const uuid = require('uuid'),
 exports.reset = function(req, res, next) {
     co(function*() {
             const data = {
-                email: req.body.email
+                email: req.body.email,
+                token: uuid.v4()
             };
             const services = yield req.getServices();
             const resetDataService = services.resetDataService;
@@ -12,6 +13,7 @@ exports.reset = function(req, res, next) {
 
         }
         try {
+            req.flash('msg', 'Email send to ' + data.emails);
             res.redirect('/');
         } catch (err) {
             console.log(err);
